@@ -12,12 +12,12 @@ module.exports = {
 			}
 			else{
 				var user = new User(req.body);
-				user.save(function(err, doc){
+				user.save(function(err, user2){
 					if(err){
 						console.log(err);
 					}
 					else{
-						res.json(doc);
+						res.json(user2);
 					}
 				})
 			}
