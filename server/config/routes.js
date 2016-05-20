@@ -1,5 +1,5 @@
-var User = require('./../controllers/users');
-var Poll = require('./../controllers/polls');
+var User = require('./../controllers/Users');
+var Poll = require('./../controllers/Polls');
 
 module.exports = function(app){
 
