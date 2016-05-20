@@ -3,7 +3,7 @@ var User = mongoose.model('User');
 
 module.exports = {
 	create: function(req, res){
-		User.find({name: req.body.name}, function(err, doc){
+		User.findOne({name: req.body.name}, function(err, doc){
 			if(err){
 				console.log(err);
 			}
