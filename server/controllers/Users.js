@@ -17,6 +17,7 @@ module.exports = {
 						console.log(err);
 					}
 					else{
+						console.log(user2);
 						res.json(user2);
 					}
 				})
