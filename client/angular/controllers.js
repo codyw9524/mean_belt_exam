@@ -124,7 +124,12 @@ myApp.controller('PollsController', function(UserFactory, PollFactory, $location
 			$("#option_4_err").html(html_str);
 			return;
 		}
-		input._user = UserFactory.current_user[0]._id;
+		if(Array.isArray(UserFactory.current_user)){
+			input._user = UserFactory.current_user[0]._id;
+		}
+		else{
+			input._user = UserFactory.current_user._id;
+		}
 		PollFactory.create(input, function(){
 			self.index();
 			$location.path('/dashboard');
