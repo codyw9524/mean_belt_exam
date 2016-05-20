@@ -12,6 +12,6 @@ app.use(bodyParser.json());
 
 require('./server/config/routes')(app);
 
-app.listen(5041, function(){
+app.listen(8000, function(){
 	console.log('listening on port 5041...');
 })
