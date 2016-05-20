@@ -1,0 +1,32 @@
+<div class="row" ng-controller="PollsController as PC">
+	<a class="header_link" href="#/dashboard">Polls</a>
+	<h4>{{PC.poll.question}}</h4>
+	<p>Click the Vote button to choose one.</p>
+	<table class="table table-striped">
+		<tr>
+			<th>Option</th>
+			<th>Current Votes</th>
+			<th>Action</th>
+		</tr>
+		<tr>
+			<td>{{PC.poll.option_1.option}}</td>
+			<td>{{PC.poll.option_1.votes}}</td>
+			<td><button class="btn btn-default" ng-click="PC.updateVote('option_1', PC.poll._id)">Vote</button></td>
+		</tr>
+		<tr>
+			<td>{{PC.poll.option_2.option}}</td>
+			<td>{{PC.poll.option_2.votes}}</td>
+			<td><button class="btn btn-default" ng-click="PC.updateVote('option_2', PC.poll._id)">Vote</button></td>
+		</tr>
+		<tr>
+			<td>{{PC.poll.option_3.option}}</td>
+			<td>{{PC.poll.option_3.votes}}</td>
+			<td><button class="btn btn-default" ng-click="PC.updateVote('option_3', PC.poll._id)">Vote</button></td>
+		</tr>
+		<tr>
+			<td>{{PC.poll.option_4.option}}</td>
+			<td>{{PC.poll.option_4.votes}}</td>
+			<td><button class="btn btn-default" ng-click="PC.updateVote('option_4', PC.poll._id)">Vote</button></td>
+		</tr>
+	</table>
+</div>

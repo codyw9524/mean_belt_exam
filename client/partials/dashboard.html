@@ -1,0 +1,24 @@
+<div class="row">
+	<div class="col-md-12">
+		<a class="header_link" href="#/">Logout</a><a class="header_link" href="#/create">Create a New Poll</a>
+	</div>
+</div>
+
+<div class="row" ng-controller="PollsController as PC">
+	<h2>Current Polls</h2>
+	<input type="text" ng-model="poll_filter" class="form-control" placeholder="Search...">
+	<table class="table table-striped">
+		<tr>
+			<th>Name</th>
+			<th>Survey Question</th>
+			<th>Date Posted</th>
+			<th>Action</th>
+		</tr>
+		<tr ng-repeat="poll in PC.polls | filter: poll_filter">
+			<td>{{poll._user.name}}</td>
+			<td><a href="#/poll/{{poll._id}}">{{poll.question}}</a></td>
+			<td>{{poll.formatted_date}}</td>
+			<td><button ng-if="PC.current_user[0].name == poll._user.name" ng-click="PC.destroy(poll)">Delete</button></td>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,16 @@
+div#login_form{
+	margin-top: 10%;
+}
+a.header_link{
+	float: right;
+	margin-left: 5%;
+}
+h3.new_poll_header{
+	display: inline-block;
+}
+input.option{
+	width: 40%;
+}
+p.error{
+	color: red;
+}

@@ -1,0 +1,42 @@
+<div class="row" ng-controller="PollsController as PC">
+	<h3 class="new_poll_header">Put the question and options here</h3>
+	<a class="header_link" href="#/dashboard">Cancel</a>
+	<form class="form-horizontal">
+		<div class="form-group" id="question_input">
+			<label for="question" class="col-sm-2 control-label">Question</label>
+			<div class="col-sm-10">
+				<input type="text" id="questin" ng-model="PC.newPoll.question" class="form-control">
+			</div>
+		</div>
+		<div class="col-md-offset-2" id="question_err"></div>
+		<div class="form-group">
+			<label for="option_1" class="col-sm-2 control-label">Option 1</label>
+			<div class="col-sm-10">
+				<input type="text" id="option_1" ng-model="PC.newPoll.option_1.option" class="form-control option">
+			</div>
+		</div>
+		<div class="col-md-offset-2" id="option_1_err"></div>
+		<div class="form-group">
+			<label for="option_2" class="col-sm-2 control-label">Option 2</label>
+			<div class="col-sm-10">
+				<input type="text" id="option_2" ng-model="PC.newPoll.option_2.option" class="form-control option">
+			</div>
+		</div>
+		<div class="col-md-offset-2" id="option_2_err"></div>
+		<div class="form-group">
+			<label for="option_3" class="col-sm-2 control-label">Option 3</label>
+			<div class="col-sm-10">
+				<input type="text" id="option_3" ng-model="PC.newPoll.option_3.option" class="form-control option">
+			</div>
+		</div>
+		<div class="col-md-offset-2" id="option_3_err"></div>
+		<div class="form-group">
+			<label for="option_4" class="col-sm-2 control-label">Option 4</label>
+			<div class="col-sm-10">
+				<input type="text" id="option_4" ng-model="PC.newPoll.option_4.option" class="form-control option">
+			</div>
+		</div>
+		<div class="col-md-offset-2" id="option_4_err"></div>
+		<button type="submit" ng-click="PC.create(PC.newPoll)" class="btn btn-default">Create Poll</button>
+	</form>
+</div>

@@ -1,0 +1,11 @@
+<div class="row" ng-controller="UsersController as UC">
+	<div id="login_form" class=" col-md-12">
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="name">Your Name</label>
+				<input type="text" ng-model="UC.newUser.name" class="form-control">
+			</div>
+			<button ng-click="UC.create(UC.newUser)" class="btn btn-default">Login</button>
+		</form>
+	</div>
+</div>
