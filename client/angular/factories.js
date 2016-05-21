@@ -4,9 +4,7 @@ myApp.factory('UserFactory', function($http){
 	factory.create = function(input, callback){
 		factory.current_user = [];
 		$http.post('/users', input).success(function(output){
-			console.log('output:', output)
 			factory.current_user = output;
-			console.log('f_c_u:', factory.current_user);
 			callback();
 		})
 	}
