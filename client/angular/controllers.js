@@ -68,7 +68,7 @@ myApp.controller('PollsController', function(UserFactory, PollFactory, $location
 			$("#option_1_err").html(html_str);
 			return;
 		}
-		if(input.option_1.option.length < 3 || input.option_1 == false){
+		if(input.option_1.option.length < 3){
 			var html_str = "";
 			html_str += '<p class="error">';
 			html_str += 'Option fields must be at least 3 characters in length.'
